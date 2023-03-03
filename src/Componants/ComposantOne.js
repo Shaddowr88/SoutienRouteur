@@ -1,22 +1,26 @@
 
 
- export default function Nav(){
+ export default function ComposantOne(props){
 
     return(
-       <nav>
-           <ul>
-               <li>
-                   <a href={"/home"}>home</a>
-               </li>
-
-               <li>
-                   <a href={"/info"}> info</a>
-               </li>
-               <li>
-                   <a href="/kk"> Param</a>
-               </li>
-
-           </ul>
-       </nav>
+        <div>
+            <div style={Styles.grosElement}>
+                <h1>
+                   <a style={Styles.grosTitre} href={"/home"}>TITRE Composant</a>
+                </h1>
+            </div>
+        </div>
     )
+ }
+
+ const Styles= {
+     grosElement:{  height: '20em',
+         backgroundColor: 'blue',
+     },
+
+     grosTitre:{
+         fontSize: '5em',
+         color: 'red',
+         textDecoration:'none',
+     },
  }

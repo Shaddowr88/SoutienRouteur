@@ -1,6 +1,6 @@
 
 
- export default function Nav(){
+ export default function Autre(){
 
     return(
        <nav>

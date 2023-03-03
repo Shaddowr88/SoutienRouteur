@@ -1,22 +1,31 @@
 
 
- export default function Nav(){
+ export default function Fort(props){
 
     return(
-       <nav>
-           <ul>
-               <li>
-                   <a href={"/home"}>home</a>
-               </li>
+       <div>
 
-               <li>
-                   <a href={"/info"}> info</a>
-               </li>
-               <li>
-                   <a href="/kk"> Param</a>
-               </li>
+           <h1 style={Styles.grosTitre}>
+               {props.titre}
+           </h1>
 
-           </ul>
-       </nav>
+
+           <div style={Styles.grosElement}>
+
+
+           </div>
+
+       </div>
     )
+ }
+
+ const Styles= {
+     grosElement:{  height: '10em',
+     backgroundColor: 'yellow',
+     },
+
+     grosTitre:{
+         fontSize: '10em',
+         color: 'red'
+     },
  }

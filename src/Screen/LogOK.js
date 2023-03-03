@@ -1,13 +1,12 @@
 
 
-export default function Log(){
+export default function LogOk(){
 
     return(
       <div>
           <h1>
-              Log
+              LogOK
           </h1>
-
       </div>
 
     );

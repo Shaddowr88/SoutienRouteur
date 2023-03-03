@@ -1,10 +1,21 @@
 
 
- export default function Nav(){
+ export default function Nav(props){
 
     return(
-        <div>
-            <h1>Hello Nav !!</h1>
-        </div>
+       <nav>
+           <ul>
+               {/* boucle pour affiché les routes reçus en props*/}
+               {props.chemins.map((i,k) =>
+               <li>
+                   <a key={k.toString()}  href={'/'+i}>{i}</a>
+               </li>
+               )}
+           </ul>
+
+           <li>
+               <a  href={'/info/Loged'}>age</a>
+           </li>
+       </nav>
     )
  }
