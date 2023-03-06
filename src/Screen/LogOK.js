@@ -3,7 +3,7 @@ import React from 'react';
 import {Outlet} from "react-router-dom";
 import Nav from "../Componants/Nav";
 
-const path= ['home', 'info','A propos','encore','hello'];
+const path= ['home','A propos','encore','hello'];
 
 export default function LogOk(){
 

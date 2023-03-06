@@ -16,7 +16,7 @@ export default function UserScreen(){
 
             <div>
                 <UserContext.Consumer>
-                    { value => <h1> Hello { value.name} !!!</h1>}
+                    { value => <h1> Hello { value.id} !!!</h1>}
                     {/* affiche: Reed */}
                 </UserContext.Consumer>
                 <Fort elements={el}/>
