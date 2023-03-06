@@ -3,13 +3,13 @@ import React from "react";
 import * as PropTypes from "prop-types";
 import HomeScreen from "./Screen/HomeScreen";
 
-import Nav from "./Componants/Nav";
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
 import NofoundScreen from "./Screen/NofoundScreen";
 import InfoScreen from "./Screen/InfoScreen";
 import Log from "./Screen/Log";
 import LogOk from "./Screen/LogOK";
 import UserScreen from "./Screen/UserScreen";
+import AproposScreen from "./Screen/AppoposScreen";
 
 const Users=[
     {
@@ -28,14 +28,16 @@ RouterProvider.propTypes = {routes: PropTypes.any};
 const routes = createBrowserRouter([
     {path: "/home", element: <LogOk/>, children: [
             {
-                path: "/home/:userId",
-                element: <UserScreen />,
+                path: "/home/userScreen",
+                element: <UserScreen/>,
             },
         ],
     },
-    {path: "/", element: < Log/>},
+    {path: "/", element: <Log/>},
+    {path: "/A propos", element: <AproposScreen/>},
+    {path: "/encore", element: <Log/>},
+    {path: "/hello", element: <HomeScreen/>},
     {path: "/info/:isLoged", element: <InfoScreen/>},
-    // route Not Match
     {path: "*", element: <NofoundScreen/>},
 ]);
 

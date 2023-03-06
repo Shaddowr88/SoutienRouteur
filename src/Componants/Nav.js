@@ -17,9 +17,7 @@ export default function Nav(props){
                        <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
                            {props.chemins.map((i,k) =>
                                <li key={k.toString()} >
-
                                    <a  href={'/'+i} className="nav-link px-2 link-dark">{i}</a>
-
                                </li>
                            )}
                        </ul>
@@ -48,14 +46,7 @@ export default function Nav(props){
                    </div>
                </div>
            </header>
-
-
-
-
                <a  href={'/info/Loged'}>age</a>
-
-
-
        </nav>
     )
  }

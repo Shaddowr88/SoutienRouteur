@@ -1,6 +1,5 @@
 import ComposantOne from "../Componants/ComposantOne";
 import Fort from "../Componants/ComposantFort";
-import {useParams, Outlet} from "react-router-dom";
 import {UserContext} from "../App";
 
 const el = [

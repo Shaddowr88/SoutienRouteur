@@ -8,7 +8,7 @@ export default function Log(){
           <h1>
               Log
           </h1>
-          <a href={"/home/1"}>home</a>
+          <a href={"/home/userScreen"}>home</a>
           <Outlet />
       </div>
     );
