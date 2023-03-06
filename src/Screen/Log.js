@@ -1,3 +1,4 @@
+import {Outlet} from "react-router-dom";
 
 
 export default function Log(){
@@ -7,6 +8,8 @@ export default function Log(){
           <h1>
               Log
           </h1>
+          <a href={"/home/1"}>home</a>
+          <Outlet />
       </div>
     );
 }

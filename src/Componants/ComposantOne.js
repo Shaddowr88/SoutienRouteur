@@ -16,6 +16,7 @@
  const Styles= {
      grosElement:{  height: '20em',
          backgroundColor: 'blue',
+         marginBottom:'5em'
      },
 
      grosTitre:{

@@ -1,21 +1,61 @@
+import {UserContext} from "../App";
 
 
- export default function Nav(props){
+export default function Nav(props){
 
     return(
        <nav>
-           <ul>
-               {/* boucle pour affiché les routes reçus en props*/}
-               {props.chemins.map((i,k) =>
-               <li>
-                   <a key={k.toString()}  href={'/'+i}>{i}</a>
-               </li>
-               )}
-           </ul>
+           <header className="p-3 mb-3 border-bottom">
+               <div className="container">
+                   <div className="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+                       <a href="/" className="d-flex align-items-center mb-2 mb-lg-0 text-dark text-decoration-none">
+                           <svg className="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap">
+                               {/*<use xlink:href="#bootstrap"></use>  */}
+                           </svg>
+                       </a>
 
-           <li>
+                       <ul className="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+                           {props.chemins.map((i,k) =>
+                               <li key={k.toString()} >
+
+                                   <a  href={'/'+i} className="nav-link px-2 link-dark">{i}</a>
+
+                               </li>
+                           )}
+                       </ul>
+
+                       <div className="dropdown text-end">
+
+                           <a href="#" className="d-block link-dark text-decoration-none dropdown-toggle"
+                              data-bs-toggle="dropdown" aria-expanded="false">
+                               <UserContext.Consumer>
+                                   { value =>
+                                       <img src={value.avatarUrl}
+                                            alt="mdo"
+                                            width="32"
+                                            height="32"
+                                            className="rounded-circle"/>
+                                      }
+                               </UserContext.Consumer>
+                           </a>
+                           <ul className="dropdown-menu text-small" >
+                               <li><a className="dropdown-item" href="#">New project...</a></li>
+                               <li><a className="dropdown-item" href="#">Settings</a></li>
+                               <li><a className="dropdown-item" href="#">Profile</a></li>
+                               <li><a className="dropdown-item" href="#">Sign out</a></li>
+                           </ul>
+                       </div>
+                   </div>
+               </div>
+           </header>
+
+
+
+
                <a  href={'/info/Loged'}>age</a>
-           </li>
+
+
+
        </nav>
     )
  }
