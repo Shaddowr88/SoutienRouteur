@@ -1,4 +1,6 @@
 import {UserContext} from "../App";
+import UserPicto from "../asset/img/User_Picto.png"
+import DropMenu from "./DropMenuComponent";
 
 
 export default function Nav(props){
@@ -28,7 +30,7 @@ export default function Nav(props){
                               data-bs-toggle="dropdown" aria-expanded="false">
                                <UserContext.Consumer>
                                    { value =>
-                                       <img src={value.avatarUrl}
+                                       <img src={value.avatarUrl ||= UserPicto }
                                             alt="mdo"
                                             width="32"
                                             height="32"
@@ -36,12 +38,7 @@ export default function Nav(props){
                                       }
                                </UserContext.Consumer>
                            </a>
-                           <ul className="dropdown-menu text-small" >
-                               <li><a className="dropdown-item" href="#">New project...</a></li>
-                               <li><a className="dropdown-item" href="#">Settings</a></li>
-                               <li><a className="dropdown-item" href="#">Profile</a></li>
-                               <li><a className="dropdown-item" href="#">Sign out</a></li>
-                           </ul>
+                           <DropMenu/>
                        </div>
                    </div>
                </div>

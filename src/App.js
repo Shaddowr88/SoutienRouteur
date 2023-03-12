@@ -21,7 +21,7 @@ const Users=[
     {
         id:40,
         name:'Polo',
-        avatarUrl:'https://media.licdn.com/dms/image/C4E03AQHJBuct_vZY1w/profile-displayphoto-shrink_100_100/0/1600690263845?e=1683763200&v=beta&t=ip7AfxeOOJ_Z0LvmUfN8c-CQsEFolNQA5bZ919XKgnc',
+        avatarUrl:'',
         description:'Polo',
     }
 
@@ -35,15 +35,7 @@ RouterProvider.propTypes = {routes: PropTypes.any};
 const routes = createBrowserRouter([
     {path: "/home", element: <LogOk/>, children: [
             {
-                path: "/home/userId",
-                element: <UserScreen/>,
-            },
-            {
-                path: "/home/enfant2",
-                element: <UserScreen/>,
-            },
-            {
-                path: "/home/enfant3",
+                path: "/home/:userId",
                 element: <UserScreen/>,
             },
         ],
