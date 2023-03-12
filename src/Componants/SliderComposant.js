@@ -1,4 +1,4 @@
-export default function Fort(props){
+const Slider = (props)=>{
     return(
        <div>
 
@@ -47,8 +47,9 @@ export default function Fort(props){
        </div>
     )
  }
+export default Slider
 
- const Styles= {
+const Styles= {
      grosElement:{  height: '50em',
      backgroundColor: 'yellow',
      },

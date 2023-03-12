@@ -1,7 +1,8 @@
 import ComposantOne from "../Componants/ComposantOne";
-import Fort from "../Componants/ComposantFort";
+import Slider from "../Componants/SliderComposant";
 import {UserContext} from "../App";
 import {useParams} from "react-router-dom";
+import FillerComponent from "../Componants/FillerComponent";
 
 const el = [
     {id: 1, title: 'Hello World', content: 'Welcome to learning React!'},
@@ -24,8 +25,9 @@ export default function UserScreen(){
                 {el.filter(e => e.id == userId).map(filteredEl => (
                       <h1> {filteredEl.title}</h1>
                 ))}
-                <Fort elements={el}/>
-                <ComposantOne />
+                <Slider elements={el}/>
+                <FillerComponent/>
+
                 <a href={"contacts/1"}>home</a>
             </div>
 

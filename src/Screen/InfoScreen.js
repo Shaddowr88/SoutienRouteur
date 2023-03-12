@@ -1,5 +1,5 @@
 import ComposantOne from "../Componants/ComposantOne";
-import Fort from "../Componants/ComposantFort";
+import Fort from "../Componants/SliderComposant";
 import {useParams} from "react-router-dom";
 
 
